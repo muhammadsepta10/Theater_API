@@ -14,11 +14,12 @@ module.exports = {
       dateEnd: {
         type: Sequelize.DATE
       },
-      timeStart: {
-        type: Sequelize.TIME
-      },
-      timeEnd: {
-        type: Sequelize.TIME
+      id_studio: {
+        type: Sequelize.INTEGER,
+        reference: {
+          model: "studio",
+          key: "id"
+        }
       },
       id_film: {
         type: Sequelize.INTEGER,

@@ -8,6 +8,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      id_schedule: {
+        type: Sequelize.INTEGER,
+        reference: {
+          model: "schedule",
+          key: "id"
+        }
+      },
       id_film: {
         type: Sequelize.INTEGER,
         reference: {
@@ -40,6 +47,13 @@ module.exports = {
         },
         onUpdate: "cascade",
         onDelete: "cascade"
+      },
+      id_status: {
+        type: Sequelize.INTEGER,
+        reference: {
+          model: "status",
+          key: "id"
+        }
       },
       createdAt: {
         allowNull: false,
