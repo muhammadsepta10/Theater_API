@@ -23,6 +23,10 @@ const paymentContr = require("./controllers/payment");
 const seatContr = require("./controllers/seat");
 const timeContr = require("./controllers/time");
 
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
+
 app.group("/api/genres", router => {
   router.get("/", genreContr.index);
   router.post("/create", genreContr.create);
